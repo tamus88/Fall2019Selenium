@@ -8,9 +8,9 @@ import org.openqa.selenium.safari.SafariDriver;
 
 public class DriverFactory {
 
-    public static WebDriver createAdriver(String browserName){
+    public static WebDriver createADriver(String browserName){
         if(browserName.equalsIgnoreCase("chrome")) {
-            WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().version("79.0").setup();
             return new ChromeDriver();
         }else if(browserName.equalsIgnoreCase("safari")){
             return new SafariDriver();
